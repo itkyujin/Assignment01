@@ -1,4 +1,4 @@
-# Assignment01
+# Group 7 (Assignment01)
 # Name: Mohamed Abdallah, Student Number: 200 
 # Name: Kyujin Kim, Student Number: 200442930
 
