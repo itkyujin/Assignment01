@@ -31,6 +31,8 @@ Movie Collection Management Application
 
 
 4) Ratings Table
+![image](https://user-images.githubusercontent.com/104597854/171064235-ae32c4f7-817b-4ad4-84c5-9770c0eb9ebb.png)
+
 ![image](https://user-images.githubusercontent.com/104597854/170847049-97388100-a271-4f47-9fc5-518ff430d1f6.png)
 
 
