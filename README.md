@@ -17,6 +17,8 @@ Movie Collection Management Application
 
 
 2) Directors Table
+![image](https://user-images.githubusercontent.com/104597854/171060403-0a228d1d-a77d-41f8-a680-ac5853688703.png)
+
 ![image](https://user-images.githubusercontent.com/104597854/170847028-b509de96-c115-41a0-b47c-414ad4044ea9.png)
 
 
