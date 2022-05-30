@@ -35,5 +35,7 @@ Movie Collection Management Application
 
 
 5) Reviewers Table
+![image](https://user-images.githubusercontent.com/104597854/171063469-69d5d4b6-0fd2-4da6-8d0a-5865be49f801.png)
+
 ![image](https://user-images.githubusercontent.com/104597854/170847065-7332d2ec-d001-447e-b5e5-b64b6ff79bca.png)
 
