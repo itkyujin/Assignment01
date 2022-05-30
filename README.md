@@ -23,6 +23,8 @@ Movie Collection Management Application
 
 
 3) Actors Table
+![image](https://user-images.githubusercontent.com/104597854/171061177-9b0f37a4-06fd-4488-981d-65d74d98d5a3.png)
+
 ![image](https://user-images.githubusercontent.com/104597854/170847040-47e1aaf1-b94e-4f37-b293-8a7fc5312cdb.png)
 
 
