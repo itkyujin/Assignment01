@@ -13,6 +13,8 @@ that allows many people to freely register, edit, and share their favorite movie
 
 Movie Collection Management Application
 1) Movies Table
+![image](https://user-images.githubusercontent.com/104597854/171062757-f0ca6c8c-9757-42b4-b71b-3c199bfe9ac0.png)
+
 ![image](https://user-images.githubusercontent.com/104597854/170847020-40448f4c-6e67-4f8d-940b-381f9c763dc8.png)
 
 
