@@ -48,8 +48,12 @@ Movie Collection Management Application
 - Create a multiple data entries in a collection
 
 
+
+
 //-----------------------READ functions--------------------------------//
 - Read a record by passing a field’s value 
+
+
 
 
 
@@ -57,9 +61,15 @@ Movie Collection Management Application
 - Update an existing record using the upsert functionality
 
 
+
+
 //-----------------------UPSERT functions--------------------------------//
+
+
 
 
 //-----------------------DELETE functions--------------------------------//
 - Delete records by date
+
+
 
