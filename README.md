@@ -58,17 +58,15 @@ Movie Collection Management Application
 
 //-----------------------UPDATE functions--------------------------------//
 - Update an existing record using the upsert functionality
-
+![image](https://user-images.githubusercontent.com/104597854/171314271-8bb84eb7-56b4-4e12-b01f-f83f08652f67.png)
 
 
 
 //-----------------------UPSERT functions--------------------------------//
-
+![image](https://user-images.githubusercontent.com/104597854/171314492-600eaa7d-e137-4b56-bfce-e07bcc398d50.png)
 
 
 
 //-----------------------DELETE functions--------------------------------//
 - Delete records by date
-
-
 
