@@ -46,13 +46,12 @@ Movie Collection Management Application
 
 //-----------------------CREATE functions--------------------------------//
 - Create a multiple data entries in a collection
-
+![image](https://user-images.githubusercontent.com/104597854/171313835-2f6b34ff-168f-4c51-845a-ab40bfd30ffb.png)
 
 
 
 //-----------------------READ functions--------------------------------//
 - Read a record by passing a field’s value 
-
 
 
 
