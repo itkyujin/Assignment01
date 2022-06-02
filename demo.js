@@ -11,20 +11,43 @@ async function main() {
         //--------------------------------------------------------------------------
         // to see all DBs in the MongoDB Cluster.
         // await listDatabases(client);
-        /*--------------------------------------------------------------------------
+        //--------------------------------------------------------------------------
+        /*
         await createListing(client, {
-            Title: "Titanic 2",
-            ReleaseYear: 2023,
-            RunTime: 180,
-            DirectorName: "James Cameron" 
+            Title: "Frozon 3",
+            ReleaseYear: 2022,
+            RunTime: 125,
+            DirectorName: "Kyu Jin Kim" 
         });
         -----------------------------------------------------------------------------
-        */
-        //await findOneMovieByTitle(client,"Titanic 2");
-       // await deleteListingByTitle(client, "Titanic" );
-       await deleteListingsByRelssingYear(client, new Date("2023-02-25"));
-        
+        await createMultipleListings(client, [
+        {
+            Title: "BAT MAN 3",
+            ReleaseYear: 2021,
+            RunTime: 205,
+            DirectorName: "James Cameron" 
+        },
+        {
+            Title: "THE LION KING 2",
+            ReleaseYear: 2022,
+            RunTime: 102,
+            DirectorName: "Christopher Buck" 
+        }
+        ]);
 
+        /*
+        // Read
+        await findOneMovieByTitle(client, "Titanic");
+
+        -----------------------------------------------------------------------------
+        // Update By Movie Title Name Query
+        await UpdateListingByMovieTitle(client, "Titanic", { ReleaseYear: 1997, RunTime: 194 });
+
+
+        -----------------------------------------------------------------------------
+       */
+        //await deleteListingByTitle(client, "Titanic");
+        await deleteListingsByRelssingYear(client, new Date("2022-12-31")); 
 
     } catch (e) {
         console.error(e);
@@ -62,9 +85,8 @@ async function listDatabases(client) {
         console.log(`- ${db.name}`);
     });
 }
-// -----------------READ ----------------------------------------------
 
-
+// ---------------------------READ ----------------------------------------------//
 async function findOneMovieByTitle(client, nameOfListing) {
     const result = await client.db("movie_collection_database").collection("movies").findOne({ Title : nameOfListing });
 
@@ -75,15 +97,53 @@ async function findOneMovieByTitle(client, nameOfListing) {
     console.log(`No movie were found '${nameOfListing}'`);
     }
     }
+
+//-----------------------UPDATE functions--------------------------------//
+
+// 1) Sing Line listing Updating By Movie Title....
+async function UpdateListingByMovieTitle(client, nameOfListing, updatedListing) {
+    const result = await client.db("movie_collection_database").collection("movies")
+        .updateOne({ Title: nameOfListing }, { $set: updatedListing });
+    console.log(`${result.matchedCount} document(s) matched the query criteria.`);
+    console.log(`${result.modifiedCount} document(s) was/were updated.`);    
+}
+
+async function updateAllListingsToHaveDirectorName(client) {
+    const result = await client.db("movie_collection_database").collection("movies")
+        .UpdateMany({ DirectorName: { $exists: false } },
+                    { $set: { DirectorName: "Unknown"} });
+    console.log(`${result.matchedCount} document(s) matched the query criteria.`);
+    console.log(`${result.modifiedCount} document(s) was/were updated.`);
+}
+
+//-----------------------UPSERT functions--------------------------------//
+
+// 1) Upserting By Movie Title(s)....
+async function upsertListingByMovieTitle(client, nameOfListing, updatedListing) {
+    const result = await client.db("movie_collection_database").collection("movies")
+        .UpdateOne({ Title: nameOfListing },
+                   { $set: updatedListing },
+                   {upsert: true });
+    console.log(`${result.matchedCount} document(s) matched the query criteria.`);
+    
+    if (result.upsertedCount > 0) {
+        console.log(`One document was inserted with the id ${result.upsertedId._id}`);
+    } else {
+        console.log(`${result.modifiedCount} document(s) was/were updated.`);
+    }
+}
+
+
 //-----------------------DELETE functions--------------------------------//
 
-/**async function deleteListingByTitle(client, nameOfListing) {
+async function deleteListingByTitle(client, nameOfListing) {
     const result = await client.db("movie_collection_database").collection("movies")
-            .deleteOne({ name: nameOfListing });
+            .deleteOne({ Title: nameOfListing });
     console.log(`${result.deletedCount} document(s) was/were deleted.`);        
-}*/
-async function deleteListingsByRelssingYear(client, Date) { 
+}
+
+async function deleteListingsByRelssingYear(client, date) { 
     const result = await client.db("movie_collection_database").collection("movies")
-        .deleteMany({ "last_Movie": { $lt: Date} });
+        .deleteMany({ ReleaseYear : { $lt: date} });
     console.log(`${result.deletedCount} document(s) was/were deleted.`);
 }
