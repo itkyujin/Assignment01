@@ -50,6 +50,9 @@ Movie Collection Management Application
 ONE CREATE
 ![image](https://user-images.githubusercontent.com/104597854/171530002-874e2a38-f3f8-4406-9216-94aee5a02f0d.png)
 
+MANY CREATE
+![image](https://user-images.githubusercontent.com/104597854/171530465-f11d3d4c-573e-4c19-8cdb-a5d2c52a0245.png)
+
 
 
 //-----------------------READ functions--------------------------------//
