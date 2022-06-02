@@ -55,11 +55,11 @@ MANY CREATE
 
 
 
-//-----------------------READ functions--------------------------------//
-- Read a record by passing a field’s value 
+//-----------------------READ functions--------------------------------// 
+![image](https://user-images.githubusercontent.com/104597854/171531849-24304d58-9198-4485-bfde-38e786506459.png)
 
-
-
+- Read a record by passing a field’s value
+![image](https://user-images.githubusercontent.com/104597854/171531698-72d25e1d-036e-48d4-aedc-1f5f07709930.png)
 
 //-----------------------UPDATE functions--------------------------------//
 - Update an existing record using the upsert functionality
