@@ -76,6 +76,7 @@ MANY CREATE
 //-----------------------DELETE functions--------------------------------//
 ![image](https://user-images.githubusercontent.com/104597854/171534014-d6824c1c-7854-47ee-8f51-c1f1b5f668da.png)
 
+![image](https://user-images.githubusercontent.com/104597854/171541554-ae5e2c3d-2abe-4ef3-9027-e212b427c267.png)
 
 - Delete records by date
 
