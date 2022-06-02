@@ -65,6 +65,7 @@ MANY CREATE
 - Update an existing record using the upsert functionality
 ![image](https://user-images.githubusercontent.com/104597854/171314271-8bb84eb7-56b4-4e12-b01f-f83f08652f67.png)
 
+![image](https://user-images.githubusercontent.com/104597854/171532666-76914c89-d053-495d-983f-5af5fad634a8.png)
 
 
 //-----------------------UPSERT functions--------------------------------//
